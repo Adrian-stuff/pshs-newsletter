@@ -27,7 +27,7 @@ const generateTitle: GenerateTitle = () => {
 }
 
 dotenv.config({
-  path: path.resolve(__dirname, '../../.env'),
+  path: path.resolve(__dirname, '../../.env.dev'),
 })
 
 export default buildConfig({

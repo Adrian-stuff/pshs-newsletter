@@ -4,7 +4,7 @@ import nextBuild from 'next/dist/build'
 import path from 'path'
 
 dotenv.config({
-  path: path.resolve(__dirname, '../.env'),
+  path: path.resolve(__dirname, '../.env.dev'),
 })
 
 import express from 'express'
