@@ -2,7 +2,7 @@
 
 .nav {
   display: flex;
-  gap: calc(var(--base) / 4) var(--base);
+  gap: 30px;
   align-items: center;
   flex-wrap: wrap;
   opacity: 1;
@@ -11,6 +11,7 @@
 
   > * {
     text-decoration: none;
+    font-size: medium;
   }
 }
 
