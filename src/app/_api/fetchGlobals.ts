@@ -28,14 +28,8 @@ export async function fetchSettings(): Promise<Settings> {
 export async function fetchHeader(): Promise<Header> {
   if (!process.env.NEXT_PUBLIC_SERVER_URL) throw new Error('NEXT_PUBLIC_SERVER_URL not found')
 
-  const header = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/graphql`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query: HEADER_QUERY,
-    }),
+  const header = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/globals/header`, {
+    cache: 'no-store',
   })
     ?.then(res => {
       if (!res.ok) throw new Error('Error fetching doc')
@@ -43,7 +37,8 @@ export async function fetchHeader(): Promise<Header> {
     })
     ?.then(res => {
       if (res?.errors) throw new Error(res?.errors[0]?.message || 'Error fetching header')
-      return res.data?.Header
+      console.log(res.navItems)
+      return res
     })
 
   return header
@@ -52,14 +47,8 @@ export async function fetchHeader(): Promise<Header> {
 export async function fetchFooter(): Promise<Footer> {
   if (!process.env.NEXT_PUBLIC_SERVER_URL) throw new Error('NEXT_PUBLIC_SERVER_URL not found')
 
-  const footer = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/graphql`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query: FOOTER_QUERY,
-    }),
+  const footer = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/globals/footer`, {
+    cache: 'no-store',
   })
     .then(res => {
       if (!res.ok) throw new Error('Error fetching doc')
@@ -67,7 +56,7 @@ export async function fetchFooter(): Promise<Footer> {
     })
     ?.then(res => {
       if (res?.errors) throw new Error(res?.errors[0]?.message || 'Error fetching footer')
-      return res.data?.Footer
+      return res
     })
 
   return footer

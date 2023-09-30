@@ -21,27 +21,23 @@ export async function Header() {
     // When deploying this template on Payload Cloud, this page needs to build before the APIs are live
     // So swallow the error here and simply render the header without nav items if one occurs
     // in production you may want to redirect to a 404  page or at least log the error somewhere
-    // console.error(error)
+    console.error(error)
   }
 
   return (
     <>
       <header className={classes.header}>
-        <Gutter className={classes.wrap}>
+        <div className={classes.wrap}>
           <Link href="/">
             {/* Cannot use the `<picture>` element here with `srcSet`
               This is because the theme is able to be overridden by the user
               And so `@media (prefers-color-scheme: dark)` will not work
               Instead, we just use CSS to invert the color via `filter: invert(1)` based on `[data-theme="dark"]`
             */}
-            <img
-              className={classes.logo}
-              alt="Payload Logo"
-              src="https://raw.githubusercontent.com/payloadcms/payload/master/src/admin/assets/images/payload-logo-light.svg"
-            />
+            <img className={classes.logo} alt="PSHS Logo" src="/pshs-logo.png" />
           </Link>
           <HeaderNav header={header} />
-        </Gutter>
+        </div>
       </header>
     </>
   )
