@@ -15,6 +15,17 @@ export const InitTheme: React.FC = () => {
           font-family: ${nunito_sans.style.fontFamily};
         }
       `}</style>
+      <Script
+        id="theme-script"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+  (function () {
+    document.documentElement.setAttribute('data-theme', "light")
+  })();
+  `,
+        }}
+      />
     </>
   )
 }

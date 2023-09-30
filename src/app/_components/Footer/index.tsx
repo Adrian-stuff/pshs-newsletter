@@ -8,7 +8,8 @@ import { Gutter } from '../Gutter'
 import { CMSLink } from '../Link'
 
 import classes from './index.module.scss'
-
+import { Nunito_Sans } from 'next/font/google'
+const nunito_light = Nunito_Sans({ subsets: ['latin'], weight: '200' })
 export async function Footer() {
   let footer: Footer | null = null
 
@@ -24,19 +25,19 @@ export async function Footer() {
   const navItems = footer?.navItems || []
   return (
     <footer className={classes.footer}>
-      <Gutter className={classes.wrap}>
-        <Link href="/">
+      <div className={[classes.wrap, nunito_light].filter(Boolean).join(' ')}>
+        {/* <Link href="/">
           <picture>
             <img className={classes.logo} alt="PSHS Logo" src="/pshs-logo.png" />
           </picture>
-        </Link>
-        <nav className={classes.nav}>
-          <ThemeSelector />
+        </Link> */}
+        {/* <nav className={classes.nav}>
           {navItems.map(({ link }, i) => {
             return <CMSLink key={i} {...link} />
           })}
-        </nav>
-      </Gutter>
+        </nav> */}
+        <p>2023 by ICT Club</p>
+      </div>
     </footer>
   )
 }
