@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 
 import './index.scss'
+import { Nunito_Sans } from 'next/font/google'
+const nunito_light = Nunito_Sans({ subsets: ['latin'], weight: '300' })
 
 export function PageCard({
   title,
@@ -18,39 +20,38 @@ export function PageCard({
   return (
     <section>
       <figure className="card">
-        <div className="card__hero">
-          <Image src={imageSrc} className="page-card__image" alt="Page" fill={true} />
+        <div className="hero">
+          <Image src={imageSrc} className="card-img" alt="Image" fill={true} />
         </div>
-        <div className="card__content">
-          <div className="card__user">
-            <div className="card__user-image">
+        <div className="card_body">
+          <div className="user">
+            <div className="user-image">
               <Image
                 src={user_image}
-                className="card__user-image"
-                alt="Page"
+                className="user-image"
+                alt="Profile Image"
                 width={48}
                 height={48}
               />
             </div>
-            <div className="card__user-details">
-              <div className="card__user-details-name">
+            <div className="user-details">
+              <div className="user-details-name">
                 <span>{user_name}</span>
               </div>
-              <div className="card__user-details-datetime">
+              <div className="user-details-datetime">
                 {date_published} - {elapsed_time}
               </div>
             </div>
-            <div className="card__user-burger">
-              <FontAwesomeIcon icon={faEllipsisV} width={16} height={16} />
-            </div>
           </div>
 
-          <h4 className="card__content-title">{title}</h4>
-          <div className="card__content-paragraph">
-            <p>{body}</p>
+          <div className="content">
+            <h4 className={`content-title ${nunito_light.className}`}>{title}</h4>
+            <div className="content-paragraph">
+              <p>{body}</p>
+            </div>
           </div>
           <hr />
-          <div className="card-content__statistics">
+          {/* <div className="card-content__statistics">
             <div className="statistics_item views">1,000 Views</div>
             <div className="statistics_item comments">0 Comment</div>
             <div className="statistics_item heartreact">
@@ -58,7 +59,7 @@ export function PageCard({
                 <FontAwesomeIcon icon={faHeart} width={16} height={16} />
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </figure>
     </section>
