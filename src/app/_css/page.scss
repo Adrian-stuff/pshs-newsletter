@@ -1,0 +1,18 @@
+// Container
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 var(--gutter-h);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title {
+    margin: 0;
+    margin-bottom: var(--base);
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: bold;
+    text-align: center;
+}

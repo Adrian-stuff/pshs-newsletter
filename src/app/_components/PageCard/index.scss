@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,400&display=swap');
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ! Page Card START
+.card {
+    box-shadow: 0 0 0.937em;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+}
+
+.card__hero {
+    flex: 0 0 50%;
+    position: relative;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 35px 25px 35px;
+}
+
+.card__img {
+    display: block;
+}
+
+// Page Card Statistics
+.card-content__statistics {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.statistics_item {
+    padding: 8px;
+    width: 100%;
+}
+
+// * Heart React
+.heartreact {
+    margin-left: auto;
+    text-align: right;
+    width: auto;
+}
+
+.comments {
+    margin-right: auto;
+    text-align: left;
+    width: auto;
+}
+
+.views {
+    position: relative;
+    width: auto;
+}
+
+.card__content-title {
+    font-size: 24px;
+    margin-bottom: -15px;
+    font-weight: 200;
+    font-family: "Nunito", sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.card__content-paragraph {
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 100px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+// ! PAGE CARD END
+
+// ! Card User START
+.card__user {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__user-image {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.card__user-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    font-family: "Nunito", sans-serif;
+}
+
+.card__user-details-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card__user-details-datetime {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+.card__user-burger {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+// ! Card User END
+
+// ! OTHERS
+hr {
+    margin: 0;
+
+}
