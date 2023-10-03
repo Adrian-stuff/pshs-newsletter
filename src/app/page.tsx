@@ -10,8 +10,8 @@ export default function Page() {
       <PageCard
         title={"Virtual Parents and Learner's Orientation for S.Y 2021-2022"}
         body={'Mollit elit aute id mollit aliqua ipsum consequat fugiat.'}
-        imageSrc={'/test_page_img.jpg'}
-        user_image={'/test_avatar.png'}
+        imageSrc={'/test_page.jpg'}
+        user_image={'/test_avatar.jpg'}
         user_name={'Vince Angelo Batecan'}
         date_published={'Oct 03, 2023'}
         elapsed_time={'1 day ago'}
