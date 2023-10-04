@@ -1,7 +1,6 @@
 $small-screen: 600px;
 $medium-screen: 900px;
-
-
+$large-screen: 1200px;
 
 // ! OTHERS
 hr {
@@ -12,18 +11,50 @@ hr {
 
 // ! Medium Screen
 
-@media (min-width: $small-screen) and (max-width: $medium-screen) {
-    section {
+@media (max-width: $small-screen) {
+    .section {
         display: flex;
+        width: 250px;
+    }
+    
+    .card {
+        border: 1px solid var(--border-color);
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        .hero {
+            display: flex;
+            justify-content: center;
+            max-height: 250px;
+            width: 100%;
+        }
+
+        .card-img {
+            display: block;
+            object-fit: cover;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
     }
 }
 
 @media (min-width: $medium-screen) {
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    // Might not be necessary
+    //section {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
 
     :root {
         --border-color: #d7e6e2;
@@ -60,7 +91,9 @@ hr {
 
         .card-img {
             display: block;
-            object-fit: cover;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
         }
 
 

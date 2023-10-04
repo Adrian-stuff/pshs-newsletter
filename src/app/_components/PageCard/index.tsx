@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
@@ -21,7 +22,7 @@ export function PageCard({
     <section>
       <figure className="card">
         <div className="hero">
-          <Image src={imageSrc} className="card-img" alt="Image" fill={true} />
+          <Image src={imageSrc} className="card-img" alt="Image" />
         </div>
         <div className="card_body">
           <div className="user">
