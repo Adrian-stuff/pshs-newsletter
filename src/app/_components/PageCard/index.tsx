@@ -2,10 +2,10 @@ import React from 'react'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Nunito_Sans } from 'next/font/google'
 import Image from 'next/image'
 
 import './index.scss'
-import { Nunito_Sans } from 'next/font/google'
 const nunito_light = Nunito_Sans({ subsets: ['latin'], weight: '300' })
 
 export function PageCard({
