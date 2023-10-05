@@ -22,7 +22,15 @@ export function PageCard({
     <section>
       <figure className="card">
         <div className="hero">
-          <Image src={imageSrc} className="card-img" alt="Image" />
+          <Image
+            src={imageSrc}
+            className="card-img"
+            alt="Image"
+            objectFit="cover"
+            fill={false}
+            width={1000}
+            height={300}
+          />
         </div>
         <div className="card_body">
           <div className="user">

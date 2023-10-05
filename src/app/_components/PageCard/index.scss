@@ -9,46 +9,8 @@ hr {
     color: var(--border-color);
 }
 
-// ! Medium Screen
-
-@media (max-width: $small-screen) {
-    .section {
-        display: flex;
-        width: 250px;
-    }
-    
-    .card {
-        border: 1px solid var(--border-color);
-        width: 100%;
-        border-radius: 4px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .card {
-        .hero {
-            display: flex;
-            justify-content: center;
-            max-height: 250px;
-            width: 100%;
-        }
-
-        .card-img {
-            display: block;
-            object-fit: cover;
-        }
-
-        .user {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-}
-
 @media (min-width: $medium-screen) {
+    
     // Might not be necessary
     //section {
     //     display: flex;
@@ -63,7 +25,7 @@ hr {
     // ! Page Card START
     .card {
         // box-shadow: 0 0 1em;
-        border: 1px solid var(--border-color);
+        border: 12px solid var(--border-color);
         width: 100%;
         border-radius: 4px;
         overflow: hidden;
