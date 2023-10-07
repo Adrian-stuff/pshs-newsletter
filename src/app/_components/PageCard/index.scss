@@ -93,25 +93,32 @@ $large-screen: 1200px;
             flex-direction: row;
             align-items: center;
             font-size: 14px;
+            padding: 8px;
         }
 
-        .statistics-item {
-            width: 100%;
+        .card-statistics {
+            .statistics-item {
+                width: 100%;
+                padding: 8px;
+            }
+    
+            .views {
+                width: auto;
+                font-size: 14px;
+            }
+    
+            .comments {
+                text-align: left;
+                margin-right: auto;
+                width: auto;
+            }
+    
+            .heartreact {
+                margin-left: auto;
+                width: auto;
+            }
         }
 
-        .views {
-            width: auto;
-            font-size: 14px;
-        }
-
-        .comments {
-            width: auto;
-        }
-
-        .heartreact {
-            margin-left: auto;
-            width: auto;
-        }
     }
 }
 
@@ -211,39 +218,39 @@ $large-screen: 1200px;
             color: gray;
             margin-top: -8px;
         }
-    
-    
-    
+
+        .card-statistics {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .card-statistics {
+            .statistics-item {
+                padding: 8px;
+                width: 100%;
+            }
+            
+            .heartreact {
+                margin-left: auto;
+                text-align: right;
+                width: auto;
+            }
+            
+            .comments {
+                margin-right: auto;
+                text-align: left;
+                width: auto;
+            }
+            
+            .views {
+                position: relative;
+                width: auto;
+            }
+        }
     }
-    
-    .statistics_item {
-        padding: 8px;
-        width: 100%;
-    }
-    
-    // * Heart React
-    .heartreact {
-        margin-left: auto;
-        text-align: right;
-        width: auto;
-    }
-    
-    .comments {
-        margin-right: auto;
-        text-align: left;
-        width: auto;
-    }
-    
-    .views {
-        position: relative;
-        width: auto;
-    }
-    
     
     // ! PAGE CARD END
-    
-    
-    
 }
 
 // ! OTHERS
