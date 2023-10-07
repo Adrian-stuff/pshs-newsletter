@@ -44,7 +44,7 @@ $desktop-card-height: 100%;
         
         .card-img {
             display: block;
-            object-fit: fill;
+            object-fit: cover;
         }
         
         .user {
@@ -172,6 +172,7 @@ $desktop-card-height: 100%;
     
         .card-img {
             display: block;
+            object-fit: cover;
         }
         
     
