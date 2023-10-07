@@ -51,7 +51,8 @@ export function PageCard({
             </div>
           </div>
           <hr />
-          <div className="card-statistics">
+          {/* = Statistics is not required - */}
+          {/* <div className="card-statistics">
             <div className="statistics-item views">1,000 Views</div>
             <div className="statistics-item comments">0 Comment</div>
             <div className="statistics-item heartreact">
@@ -59,7 +60,7 @@ export function PageCard({
                 <FontAwesomeIcon icon={faHeart} width={16} height={16} />
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </figure>
     </section>
