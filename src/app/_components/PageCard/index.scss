@@ -2,6 +2,11 @@ $small-screen: 100px;
 $medium-screen: 900px;
 $large-screen: 1200px;
 
+
+// * Devices
+$mobile-card-height: 100%;
+$desktop-card-height: 100%;
+
 @media (max-width: $medium-screen) {
     section {
         display: flex;
@@ -21,6 +26,7 @@ $large-screen: 1200px;
         overflow: hidden;
         flex-direction: column;
         border: 1px solid var(--border-color);
+        height: $mobile-card-height;
     }
 
     .card {
@@ -100,8 +106,9 @@ $large-screen: 1200px;
             .statistics-item {
                 width: 100%;
                 padding: 8px;
+
             }
-    
+            
             .views {
                 width: auto;
                 font-size: 14px;
@@ -141,6 +148,7 @@ $large-screen: 1200px;
         border-radius: 4px;
         overflow: hidden;
         display: flex;
+        height: $desktop-card-height;
     }
     
     .card {
@@ -229,9 +237,11 @@ $large-screen: 1200px;
             .statistics-item {
                 padding: 8px;
                 width: 100%;
+
             }
-            
+
             .heartreact {
+
                 margin-left: auto;
                 text-align: right;
                 width: auto;
