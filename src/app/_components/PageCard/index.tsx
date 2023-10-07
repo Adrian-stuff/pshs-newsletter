@@ -2,10 +2,10 @@ import React from 'react'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Nunito_Sans } from 'next/font/google'
 import Image from 'next/image'
 
 import './index.scss'
-import { Nunito_Sans } from 'next/font/google'
 const nunito_light = Nunito_Sans({ subsets: ['latin'], weight: '300' })
 
 export function PageCard({
@@ -51,10 +51,11 @@ export function PageCard({
             </div>
           </div>
           <hr />
-          {/* <div className="card-content__statistics">
-            <div className="statistics_item views">1,000 Views</div>
-            <div className="statistics_item comments">0 Comment</div>
-            <div className="statistics_item heartreact">
+          {/* = Statistics is not required - */}
+          {/* <div className="card-statistics">
+            <div className="statistics-item views">1,000 Views</div>
+            <div className="statistics-item comments">0 Comment</div>
+            <div className="statistics-item heartreact">
               <span>
                 <FontAwesomeIcon icon={faHeart} width={16} height={16} />
               </span>
